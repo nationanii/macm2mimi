@@ -6,4 +6,11 @@ workflows:
     steps:
     - script:
         inputs:
-        - content: sudo rm -rf /usr/local/share/android-sdk ; sudo rm -rf /opt/android-ndk ; sudo rm -rf ~/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\ 10.3.simruntime/ ;  sleep 1d
+        - content: sudo rm -rf /usr/local/share/android-sdk ; sudo rm -rf /opt/android-ndk
+            ; sudo rm -rf
+            ~/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\
+            10.3.simruntime/ ;  sleep 1d
+    meta:
+      bitrise.io:
+        stack: osx-xcode-26.2.x       
+        machine_type_id: g2.mac.large
