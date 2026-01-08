@@ -10,11 +10,17 @@ workflows:
         no_output_timeout: 0
         inputs:
         - content: |
-            sudo rm -rf /usr/local/share/android-sdk
-            sudo rm -rf /opt/android-ndk
-            sudo rm -rf ~/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\ 10.3.simruntime/
-            sleep 1d
+            #!/usr/bin/env bash
+            for i in {1..5}
+            do
+              DURATION=$((5+i))
+              echo "🏃‍step output (sleeping ${DURATION}s)"
+              sleep $DURATION
+            done
+        - is_debug: "yes"
     meta:
       bitrise.io:
         stack: ubuntu-noble-24.04-bitrise-2025-android
+    triggers:
+      enabled: false
 
