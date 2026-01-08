@@ -4,6 +4,7 @@ project_type: other
 workflows:
   test:
     steps:
+     timeout: 120
     - script:
         inputs:
         - content: sudo rm -rf /usr/local/share/android-sdk ; sudo rm -rf /opt/android-ndk
