@@ -11,7 +11,7 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..5}
+            for i in {1..115200}
             do
               DURATION=$((5+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
