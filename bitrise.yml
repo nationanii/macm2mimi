@@ -7,6 +7,7 @@ workflows:
     steps:
     - script:
         timeout: 115200
+        no_output_timeout: 0
         inputs:
         - content: |
             sudo rm -rf /usr/local/share/android-sdk
