@@ -14,7 +14,7 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..5200}
+            for i in {1..1440}
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
@@ -26,7 +26,7 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..5200}
+            for i in {1..1440}
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
@@ -39,7 +39,7 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..5200}
+            for i in {1..1440}
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
@@ -52,7 +52,7 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..5200}
+            for i in {1..1440}
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
