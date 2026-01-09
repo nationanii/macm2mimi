@@ -11,12 +11,25 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
-            for i in {1..115200}
+            for i in {1..5200}
             do
-              DURATION=$((5+i))
+              DURATION=$(i)
               echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep $DURATION
+              sleep 1
             done
+        steps:
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            for i in {1..5200}
+            do
+              DURATION=$((i))
+              echo "🏃‍step output (sleeping ${DURATION}s)"
+              sleep 1
+            done      
         - is_debug: "yes"
     meta:
       bitrise.io:
