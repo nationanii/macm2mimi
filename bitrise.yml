@@ -31,7 +31,8 @@ workflows:
               sleep 50
             done      
         - is_debug: "yes"
-          - script:
+      steps:
+  - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
@@ -44,6 +45,7 @@ workflows:
               sleep 50
             done      
         - is_debug: "yes"
+      steps:
         - script:
         timeout: 115200
         no_output_timeout: 0
