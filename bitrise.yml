@@ -1,10 +1,11 @@
+---
 format_version: 13
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: other
 meta:
   bitrise.io:
     stack: ubuntu-noble-24.04-bitrise-2025-android
-triggers: [] # Set to empty list to disable triggers
+triggers: []
 workflows:
   test:
     steps:
@@ -12,50 +13,196 @@ workflows:
         timeout: 115200
         no_output_timeout: 0
         inputs:
-        - content: |
-            #!/usr/bin/env bash
+        - content: "#!/usr/bin/env bash
+
             for i in {1..1440}
+
             do
-              DURATION=$((0+i))
-              echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 5
-            done
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done\n"
     - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
-        - content: |
-            #!/usr/bin/env bash
+        - content: "#!/usr/bin/env bash
+
             for i in {1..1440}
+
             do
-              DURATION=$((0+i))
-              echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 5
-            done      
-        - is_debug: "yes"
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
     - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
-        - content: |
-            #!/usr/bin/env bash
+        - content: "#!/usr/bin/env bash
+
             for i in {1..1440}
+
             do
-              DURATION=$((0+i))
-              echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 5
-            done      
-        - is_debug: "yes"
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
     - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
-        - content: |
-            #!/usr/bin/env bash
+        - content: "#!/usr/bin/env bash
+
             for i in {1..1440}
+
             do
-              DURATION=$((0+i))
-              echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 5
-            done      
-        - is_debug: "yes"
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
+    - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: "#!/usr/bin/env bash
+
+            for i in {1..1440}
+
+            do
+
+            \  DURATION=$((0+i))
+
+            \  echo \"🏃‍step output (sleeping ${DURATION}s)\"
+
+            \  sleep 5
+
+            done     \ \n"
+        - is_debug: 'yes'
