@@ -15,7 +15,7 @@ workflows:
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 1
+              sleep 50
             done
         steps:
     - script:
@@ -28,7 +28,33 @@ workflows:
             do
               DURATION=$((0+i))
               echo "🏃‍step output (sleeping ${DURATION}s)"
-              sleep 1
+              sleep 50
+            done      
+        - is_debug: "yes"
+          - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            for i in {1..5200}
+            do
+              DURATION=$((0+i))
+              echo "🏃‍step output (sleeping ${DURATION}s)"
+              sleep 50
+            done      
+        - is_debug: "yes"
+        - script:
+        timeout: 115200
+        no_output_timeout: 0
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            for i in {1..5200}
+            do
+              DURATION=$((0+i))
+              echo "🏃‍step output (sleeping ${DURATION}s)"
+              sleep 50
             done      
         - is_debug: "yes"
     meta:
