@@ -1,7 +1,10 @@
----
 format_version: 13
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: other
+meta:
+  bitrise.io:
+    stack: ubuntu-noble-24.04-bitrise-2025-android
+triggers: [] # Set to empty list to disable triggers
 workflows:
   test:
     steps:
@@ -17,7 +20,6 @@ workflows:
               echo "🏃‍step output (sleeping ${DURATION}s)"
               sleep 50
             done
-        steps:
     - script:
         timeout: 115200
         no_output_timeout: 0
@@ -31,8 +33,7 @@ workflows:
               sleep 50
             done      
         - is_debug: "yes"
-      steps:
-  - script:
+    - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
@@ -45,8 +46,7 @@ workflows:
               sleep 50
             done      
         - is_debug: "yes"
-      steps:
-        - script:
+    - script:
         timeout: 115200
         no_output_timeout: 0
         inputs:
@@ -59,9 +59,3 @@ workflows:
               sleep 50
             done      
         - is_debug: "yes"
-    meta:
-      bitrise.io:
-        stack: ubuntu-noble-24.04-bitrise-2025-android
-    triggers:
-      enabled: false
-
